@@ -4,13 +4,11 @@ API RESTful para monitoramento de canais e vídeos do YouTube, desenvolvida em C
 
 ## Integrantes
 
-| Nome | RM |
-|------|----|
-| Nome do integrante 1 | RM00000 |
-| Nome do integrante 2 | RM00000 |
-| Nome do integrante 3 | RM00000 |
-| Nome do integrante 4 | RM00000 |
-| Nome do integrante 5 | RM00000 |
+| Italo Caliari Silva  | RM 554758 |
+| Júlio César Ruiz Zequin | RM 554676 |
+| Vitor Montemor Ismael | RM 556027 |
+| Pedro Henrique Muzel Santos | RM 555983 |
+| Danilo Gronski Wendler | RM 556602 |
 
 ## Contexto do projeto
 
