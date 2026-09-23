@@ -1,0 +1,106 @@
+@baseUrl = http://localhost:5080/api/v1
+
+### Listar canais
+GET {{baseUrl}}/canais
+
+### Filtrar canais por nicho
+GET {{baseUrl}}/canais?nicho=Tecnologia
+
+### Buscar canal por id
+GET {{baseUrl}}/canais/1
+
+### Canal inexistente (404)
+GET {{baseUrl}}/canais/999
+
+### Vídeos de um canal
+GET {{baseUrl}}/canais/1/videos
+
+### Criar canal (201)
+POST {{baseUrl}}/canais
+Content-Type: application/json
+
+{
+  "nome": "Viagem Barata",
+  "handle": "@viagembarata",
+  "nicho": "Viagem",
+  "inscritos": 58000
+}
+
+### Criar canal inválido (400)
+POST {{baseUrl}}/canais
+Content-Type: application/json
+
+{
+  "nome": "",
+  "handle": "semarroba",
+  "nicho": "Viagem",
+  "inscritos": -1
+}
+
+### Atualizar canal (204)
+PUT {{baseUrl}}/canais/1
+Content-Type: application/json
+
+{
+  "nome": "Código Fácil",
+  "handle": "@codigofacil",
+  "nicho": "Tecnologia",
+  "inscritos": 190000
+}
+
+### Remover canal (204)
+DELETE {{baseUrl}}/canais/3
+
+### Listar vídeos
+GET {{baseUrl}}/videos
+
+### Vídeos em alta
+GET {{baseUrl}}/videos/em-alta?top=3
+
+### Buscar vídeo por id
+GET {{baseUrl}}/videos/1
+
+### Criar vídeo (201)
+POST {{baseUrl}}/videos
+Content-Type: application/json
+
+{
+  "canalId": 1,
+  "youtubeVideoId": "Lm3nOp7QrSt",
+  "titulo": "Versionamento de APIs em .NET",
+  "visualizacoes": 5200,
+  "curtidas": 610,
+  "comentarios": 48,
+  "publicadoEm": "2026-09-15T18:00:00Z"
+}
+
+### Criar vídeo com regra de negócio violada (400)
+POST {{baseUrl}}/videos
+Content-Type: application/json
+
+{
+  "canalId": 1,
+  "youtubeVideoId": "Ab1cDe2FgHi",
+  "titulo": "Vídeo com mais curtidas que views",
+  "visualizacoes": 100,
+  "curtidas": 500,
+  "comentarios": 3,
+  "publicadoEm": "2026-09-10T18:00:00Z"
+}
+
+### Atualizar vídeo (204)
+PUT {{baseUrl}}/videos/1
+Content-Type: application/json
+
+{
+  "canalId": 1,
+  "youtubeVideoId": "cF4sPq9LmZa",
+  "titulo": "C# em 15 minutos: do zero à primeira API",
+  "visualizacoes": 51000,
+  "curtidas": 4100,
+  "comentarios": 430,
+  "publicadoEm": "2026-08-20T18:00:00Z"
+}
+
+### Remover vídeo (204)
+DELETE {{baseUrl}}/videos/2
