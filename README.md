@@ -63,7 +63,7 @@ src/TubeMonitor.Api/
 **Pré-requisito:** [.NET 10 SDK](https://dotnet.microsoft.com/download)
 
 ```bash
-git clone <url-do-repositorio>
+git clone <git clone https://github.com/JulioZequin/tubemonitor-api.git>
 cd tubemonitor-api/src/TubeMonitor.Api
 dotnet run
 ```
